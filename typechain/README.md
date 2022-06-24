@@ -44,8 +44,37 @@ tsc --init
 
 - 타입 정의 파일은 JS 코드의 모양을 TS에게 설명해 주는 파일
 
+"allowJs": true, /_ Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. _/
+
 ## 팁
 
 - Ctrl을 누르고 메서드를 클릭하면 해당 ~d.ts 파일로 이동
 
 - TS는 이런 ~d.ts를 통해 뛰어난 자동완성 기능을 제공?
+
+## 5.5 Blocks 강의 내용
+
+컴파일과 실행 동시
+
+```bash
+npm run build && npm start
+```
+
+위 방법은 비효율적, 빌드없이 TS 실행: ts-node 설치
+
+```bash
+npm i -D ts-node
+```
+
+소스 수정 모니터링: nodemon 설치
+
+```bash
+npm i -D nodemon
+```
+
+TS파일 수정시 자동 실행 스크립트 실행
+
+```bash
+npm run dev
+
+```
