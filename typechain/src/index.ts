@@ -18,17 +18,20 @@ class Block {
 
 // JS 외부 모듈(./myPackage.js)과
 // 해당 타입 정의 파일(./myPackage.d.ts) 작성
-//import { init, exit } from "myPackage"; // 'myPackage' 모듈 호출
-// 'myPackage.js' 파일 호출 => tsconfig.json > "allowJs": true 설정 필요
+
+// JS 모듈 호출: npm의 node_module 인 것처럼 'myPackage' 모듈 호출
+//import { init, exit } from "myPackage";
+
+// JS 파일 호출: 'myPackage.js' 실제 파일 호출 => tsconfig.json > "allowJs": true 설정 필요
+// 사전작업: ./myPackage.d.ts 파일 제거
+// JS파일(옛날 코드)와 TS코드(최근 코드)를 혼용 가능
+// 대용량(수천 줄의) JS 파일인 경우 그대로 사용
+// 하지만 TS의 최소한의 보호 가능 => JSDoc 이용
 import { init, exit } from "./myPackage";
 
-// 외부 패키지 및 라이브러리의 ~.d.ts 파일이
-// 없으면 함수 위로 ctrl + 클릭해도 반응이 없음
 init({
-  url: "true",
+  debug: true,
+  url: "htpp://test.com",
 });
 
 exit(1);
-
-// 자주 마주칠 환경은 JS와 TS가 공존하는 경우
-//
