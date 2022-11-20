@@ -3,7 +3,7 @@ type SuperPrint = {
   <T>(arr: T[]): T;
 };
 */
-// 단축 call signature
+// 짧은 call signature
 type SuperPrint = <T>(arr: T[]) => T;
 
 // 논리적으로 any와 유사하다고 볼 수 있으나

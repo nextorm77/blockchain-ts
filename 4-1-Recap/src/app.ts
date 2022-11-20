@@ -1,4 +1,4 @@
-/*
+/* 
 // 컴파일된 JS에는 접근 제어자가 없음
 // abstract 개념은 TS에만 있음
 // abstract class는 상속(extends)만 가능, 직접 인스턴스(new)는 불가능
@@ -29,7 +29,7 @@ son.firstName;
 son.getFullName(); 
 
 son.getNickName();
-*/
+ */
 
 // 응용: 해쉬맵
 

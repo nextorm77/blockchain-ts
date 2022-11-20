@@ -11,5 +11,8 @@
     "typescript"
   ],
   "author": "nextorm",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "tsc-watch": "^5.0.3"
+  }
 }

@@ -52,11 +52,13 @@ class Player implements User, Human {
 }
 
 // interface를 type처럼 사용
+// class도 type처럼 사용 가능: 4-1 참조
 function makeUser(user: User) {
   return "hi";
 }
 
 // class와 다르게 내용물만 열거.
+// User가 클래스인 경우?
 // makeUser(new User(...)) => X
 makeUser({
   firstName: "snoo",

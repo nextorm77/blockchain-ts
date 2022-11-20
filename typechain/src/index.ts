@@ -46,7 +46,7 @@ class BlockChain {
   }
   public getBlocks() {
     //return this.blocks; // 보안 취약: 데이터 수정 가능
-    return [...this.blocks]; // spread operator of array, 배열안의 새로운 배열
+    return [...this.blocks]; // spread operator of array,  기존 배열의 아이템들을 새로운 배열에 나열
   }
 }
 

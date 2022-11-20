@@ -21,11 +21,13 @@ const d = superPrint([1, 2, true, false]);
 const e = superPrint([1, 2, true, "hello"]);
 
 // call signature외에 Generic의 다른 사용 방법 #2
+// 아래 1,2,3번 코드는 표현 방법만 다르고 결과 동일
 type Player<E> = {
   name: string;
   extraInfo: E;
 };
 /*
+// 1번
 const son: Player<{ hobby: string }> = {
   name: "son",
   extraInfo: {
@@ -34,7 +36,9 @@ const son: Player<{ hobby: string }> = {
 };
 */
 
-/* type을 한 번 더 선언
+/* 
+// 2번
+// type을 한 번 더 선언
 type SonPlayer = Player<{ hobby: string }>;
 
 const son: SonPlayer = {
@@ -45,6 +49,7 @@ const son: SonPlayer = {
 };
 */
 
+// 3번
 // type을 2번 선언
 type SonExtra = {
   hobby: string;
